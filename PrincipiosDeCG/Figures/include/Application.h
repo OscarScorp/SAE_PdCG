@@ -29,7 +29,7 @@ public:
 	int once = 0;
 
 	//Shapes
-	int randSides{ 4 };
+	int randSides1{ 4 }, randSides2{ 4 }, randSides3{ 4 }, randSides4{ 4 }, randSides5{ 4 };
 	void drawSquare(const int &size);
 	void drawTriangle(const int &base, const int &height);
 

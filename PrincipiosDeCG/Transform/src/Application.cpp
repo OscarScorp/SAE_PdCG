@@ -191,30 +191,21 @@ Vector3D Application::PuntoMedioVec(Vector3D a, Vector3D b) {
 void Application::update() {
 	Matrix3 mA, mB, accum;
 
-	//esto esta mal, para es son los metodos estaticos de Matrix3
-	//debe ser:
-
-	mA = Matrix3::Translate(v1_a);
-
-
+	mA = Matrix3::Translate(des1);
+	mB = Matrix3::Identity();
 	//Estos  son solo ejemplos de como debe ser.. Para la tarea tienes que usar escala, traslacion y rotacion
 	accum = mA * mB; //Escala
 	//accum = mA + mB; //Traslación
 	verticesTransformados.clear();
 	for (Vector3D v : vertex)
 		verticesTransformados.push_back(accum * v);
-	//al terminar update verticesTransformados ya tiene la informacion lista para graficarse
 }
 
 void Application::draw() { //Transform
-	SetColor(black); //usar SetColor para definir el color de fondo de pantalla
-	ClearScreen(); //usar clearScreen() para borrar la pantalla con el color seteado
-
-	SetColor(green); //Setear el color para dibujar el sierpinsky (con setColor)
-	update();
-	//verticesTransformados tiene la informacion lista para ser graficada
+	SetColor(black);
+	ClearScreen();
+	SetColor(green);
 	for (int i = 0; i < verticesTransformados.size(); i += 3) { //Sierpinski Gasket:
-		for(int d = 0; d < des1.x; ++d)
 			Triangle(verticesTransformados[i], verticesTransformados[i + 1], verticesTransformados[i + 2]);
 	}
 }

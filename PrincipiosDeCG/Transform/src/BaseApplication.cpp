@@ -1,11 +1,7 @@
 //
-
 //  HelloCube
-
 //
-
 //  Created by Pedro  Cervantes Pintor on 11/Oct/14.
-
 //
 #define GLM_FORCE_RADIANS
 

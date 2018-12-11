@@ -42,7 +42,11 @@ Application::Application() : BaseApplication(),
 	v3_c.x = rand() % canvas * randMinus;
 	v3_c.y = rand() % canvas * randMinus;
 
-	randSides = rand() % 9 + 3;
+	randSides1 = rand() % 12 + 3;
+	randSides2 = rand() % 12 + 3;
+	randSides3 = rand() % 12 + 3;
+	randSides4 = rand() % 12 + 3;
+	randSides5 = rand() % 12 + 3;
 }
 
 Application::~Application()
@@ -182,47 +186,6 @@ void Application::GenerateTriangles() {
 	Triangle(v3_a, v3_b, v3_c);
 }
 
-//Convención de la clase Matriz: renglón y columna (x,y).
-/*
-Constructor de Matrix3 que inicializara en 0;
-Matrix3 Matrix3::operator * (const Matrix3 & RH)
-{
-	
-}
-
-//Matrix a = Matrix3::Identity();
-Matrix3 Matrix3::Identity()
-{
-	Matrix3 r;
-	r.m[0][0] = r.m[1][1] = r.m[2][2] = 1;
-	r.m[0][1] = r.m[0][2] =
-	r.m[1][0] = r.m[1][2] =
-	r.m[2][0] = r.m[2][1] = 0;
-	return r;
-}
-
-Matrix3 Matrix3::operator = (const Matrix3 & RH)
-{
-	for (int row = 0; row < 3; ++row)
-	for (int col = 0; col < 3; ++col)
-		for (int i = 0; i < 3; ++i)
-			for (int j = 0; j < 3; ++j)
-				result.m[row][col] += m[i][j] * RH[j][i];
-}
-
-Matrix3 Matrix3::Translate(const vec3 & v)
-{
-	Matrix r = Matrix 3::Identity();
-	r.m[0][2] = v.x;
-	r.m[1][2] = v.y;
-	return r;
-}
-
-Rotación: [cos(ang*pi / 180), cos(ang*pi / 180), dx]
-		  [cos(ang*pi / 180), cos(ang*pi / 180), dy]
-		  [0,0,1]
-		La única manera de rotar un objeto en 2 dimensiones es sobre Z.
-*/
 void Application::DrawCircle(int r) {
 	SetColor(magenta);
 
@@ -235,59 +198,19 @@ void Application::DrawCircle(int r) {
 	}
 }
 
-/*
-Void Application::update()
-{
-	//Calulcar trans
-	//pon aquí tus transformaciónes y guardar todo en Matrix3 accum;
-	verticesTransformados.clear();
-	for(vec3 v: vertices)
-		verticesTransformados.push_back(accum * v);
-}
-*/
-
-/*
-Nov 20
-vec4
-{
-public:
-vec4(); //(0,0,0,1)
-vec4(const float &x, const float &y, const float z), //x, y, z, 1)
-float v[4];
-float dot (const vec4 & rh); //producto punto
-vec4 cross (const vec4 & rh); //producto cruz
-void normalize (); // normaliza el vector (longitud = 1)
-void homogenize(); // lleva el vector que tenga el w a 1
-}
-
-class Matrix4
-{
-public:
-static Matrix4 RortateX(const float & ang);
-static Matrix4 RortateX(const float & ang);
-static Matrix4 RortateX(const float & ang);
-static Matrix4 Translate(vec4 & v);
-static Matrix4 Scale(vec4 & v);
-Matrix4 operator * (const Matrix4 & RH);
-vec4 operator * (const vec4 & RH);
-
-private:
-float m[4][4];	
-
-}
-
-*/
-
 void Application::draw()
 {
+	/*
+	SetColor(magenta);
+	DrawCircle(300);
+	*/
+
 	SetColor(green);
-	if (runOnce == false) {
-		for (int i = 0; i < 5; ++i) {
-			randMinus = rand() % 2; if (randMinus != 1) randMinus = -1;
-			Figure(randSides, 100, (50 * i) * randMinus, (50 * i) * randMinus);
-		}
-		runOnce = true;
-	}
+	Figure(randSides1, 100, 0, 0);
+	Figure(randSides2, 100, -250, 250);
+	Figure(randSides3, 100, 250, 250);
+	Figure(randSides4, 100, -250, -250);
+	Figure(randSides5, 100, 250, -250);
 	
 	SetColor(yellow);
 	GenerateTriangles();
