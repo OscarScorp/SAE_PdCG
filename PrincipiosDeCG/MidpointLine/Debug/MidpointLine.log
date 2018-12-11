@@ -1,0 +1,18 @@
+﻿  pch.cpp
+  Application.cpp
+c:\users\scorp\documents\sae\pdcg\sae_pdcg\principiosdecg\midpointline\application.cpp(7): error C2059: syntax error: 'constant'
+c:\users\scorp\documents\sae\pdcg\sae_pdcg\principiosdecg\midpointline\application.cpp(8): error C2059: syntax error: ')'
+c:\users\scorp\documents\sae\pdcg\sae_pdcg\principiosdecg\midpointline\application.cpp(21): error C2143: syntax error: missing ';' before '{'
+c:\users\scorp\documents\sae\pdcg\sae_pdcg\principiosdecg\midpointline\application.cpp(21): error C2447: '{': missing function header (old-style formal list?)
+c:\users\scorp\documents\sae\pdcg\sae_pdcg\principiosdecg\midpointline\application.cpp(30): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Color'
+  c:\users\scorp\documents\sae\pdcg\sae_pdcg\principiosdecg\midpointline\application.cpp(30): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\scorp\documents\sae\pdcg\sae_pdcg\principiosdecg\midpointline\application.cpp(131): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\scorp\documents\sae\pdcg\sae_pdcg\principiosdecg\midpointline\application.cpp(132): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  MidpointLine.cpp
+  BaseApplication.cpp
+c:\users\scorp\documents\sae\pdcg\sae_pdcg\principiosdecg\midpointline\src\baseapplication.cpp(323): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  Pixel.cpp
+c:\users\scorp\documents\sae\pdcg\sae_pdcg\principiosdecg\midpointline\src\pixel.cpp(105): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  ShaderFuncs.cpp
+c:\users\scorp\documents\sae\pdcg\sae_pdcg\principiosdecg\midpointline\src\shaderfuncs.cpp(102): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  Generating Code...

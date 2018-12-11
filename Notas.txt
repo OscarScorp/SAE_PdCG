@@ -1,0 +1,36 @@
+//Esto es para 3D
+//esto va en un nuevo archivo vec4.h y su implementacion en vec4.cpp. Igual que con el programa de transformaciones 2D
+/*
+Nov 20
+vec4
+{
+public:
+vec4(); //(0,0,0,1)
+vec4(const float &x, const float &y, const float z), //x, y, z, 1)
+float v[4];
+float dot (const vec4 & rh); //producto punto
+vec4 cross (const vec4 & rh); //producto cruz
+void normalize (); // normaliza el vector (longitud = 1)
+void homogenize(); // lleva el vector que tenga el w a 1
+}
+
+
+//Esto es para 3D
+//esto va en un nuevo archivo Matrix4.h y su implementacion en Matrix4.cpp. Igual que con el programa de transformaciones 2D
+class Matrix4
+{
+public:
+static Matrix4 RortateX(const float & ang);
+static Matrix4 RortateX(const float & ang);
+static Matrix4 RortateX(const float & ang);
+static Matrix4 Translate(vec4 & v);
+static Matrix4 Scale(vec4 & v);
+Matrix4 operator * (const Matrix4 & RH);
+vec4 operator * (const vec4 & RH);
+
+private:
+float m[4][4];	
+
+}
+
+*/
